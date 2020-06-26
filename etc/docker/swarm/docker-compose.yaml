@@ -11,7 +11,7 @@ services:
       replicas: 1
       restart_policy:
         condition: any
-    image: secobau/spring-petclinic
+    image: secobau/spring-petclinic:0.2
     ports:
       - 80:8080
 version: '3.8'
