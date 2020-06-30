@@ -6,7 +6,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: petclinic
-  namespace: petclinic
+  namespace: petclinic-0
 spec:
   replicas: 1
   selector:
@@ -26,7 +26,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: petclinic
-  namespace: petclinic
+  namespace: petclinic-0
 spec:
   ports:
   -
@@ -38,7 +38,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: petclinic
-  namespace: petclinic
+  namespace: petclinic-0
 spec:
   host: petclinic.apps.openshift.sebastian-colomar.es
   to:
