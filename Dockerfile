@@ -12,3 +12,5 @@ WORKDIR /app
 COPY --from=build /app/target/spring-petclinic.jar /app
 ENTRYPOINT ["java","-jar"]
 CMD ["spring-petclinic.jar"]
+
+# COMMENT
