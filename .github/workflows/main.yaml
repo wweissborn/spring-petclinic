@@ -19,7 +19,7 @@ jobs:
         date=$( date +%s )
         script=.github/bin/check-service.sh
         sed -i s/worker/manager/ ${compose}
-        sed -i s/secobau/${date}/ ${compose}
+        sed -i s/wweissborn/${date}/ ${compose}
         docker swarm init
         docker build -t ${date}/spring-petclinic --no-cache .
         docker stack deploy -c ${compose} petclinic
